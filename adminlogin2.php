@@ -41,8 +41,8 @@
 
               echo "<table border='0'>
                     <tr>
-                    <th>id</th>
-                    <th>qname</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
                     </tr>";
 
               while($row = mysqli_fetch_array($result))
