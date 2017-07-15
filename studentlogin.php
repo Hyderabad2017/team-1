@@ -15,7 +15,7 @@
 	$query = "SELECT * FROM studentdb WHERE sname='$stuname' AND spwd='$spassword'";
 		$result = mysqli_query($db,$query);
 		if(mysqli_num_rows($result) == 1) {
-			$_SESSION['stuname'] = $stuname;
+			//$_SESSION['stuname'] = $stuname;
 			header('location: stu1.php');
 		} else {
 			array_push($errors, $password);

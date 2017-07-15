@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿<?php include('server.php'); ?>
+<!doctype html>
 <hmtl>
  <head>
     <meta charset="utf-8">
@@ -23,41 +24,35 @@
             <h2> MODIFYING DETAILS</h2>
               <div = "form-group">            
                 <label>For adding student details</label>  
-                <button type="submit" class="btn btn-primary"> Add Student </button>
-              </div> 
+				<form action="studentadd.php" method="post">
+				<a type="button" class="btn btn-primary" value="Submit" href = "studentadd.php">Submit</a>
+				</form>
+
+				
+              </div>
+			  
              <!-- <div = "form-group">            
 	              <label>Update Qualification details</label>	
                 <input type="text" class="form-control"  id="qualificationdetails" placeholder="Enter the Modified details">
               </div>-->
-              <?php
-              $con=mysqli_connect("example","root","");
-              // Check connection
-              if (mysqli_connect_errno())
-              {
-                echo "Failed to connect to MySQL: " . mysqli_connect_error();
-              }
-
-              $result = mysqli_query($con,"SELECT * FROM exmp");
-
-              echo "<table border='0'>
-                    <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    </tr>";
-
-              while($row = mysqli_fetch_array($result))
-              {
-              echo "<tr>";
-              echo "<td>" . $row['id'] . "</td>";
-              echo "<td>" . $row['qname'] . "</td>";
-              echo "</tr>";
-              }
-              echo "</table>";
-
-              mysqli_close($con);
-              ?> 
+  
               <div = "form-group">            
                 <label>Add Qualifications</label> 
+				
+				<select name="ename" id="ename">
+			<?php
+			$query = "SELECT ename FROM examdb";
+			$result = mysqli_query($db, $query);
+		
+			while ($cdrow=mysqli_fetch_array($result)) {
+				$cdTitle=$cdrow["ename"];
+					echo "<option>
+						$cdTitle
+					</option>";
+				}
+			?></select>
+
+				
                 <input type="text" class="form-control"  id="addqualifications" placeholder="Enter the Modified qualification"> 
                 <button type="submit" class="btn btn-primary"> ADD </button>
               </div>         

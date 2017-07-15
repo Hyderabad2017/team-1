@@ -17,8 +17,8 @@ echo "Hi";
 	 $query = "INSERT INTO team_1(vname,vaddress,vemail1,vmobile1,vqualification,vpwd,vgender,vlang,vstatus,vdaysav) 
 	 VALUES('$vname','$vaddress','$vemail','$vmobile','$vquali','$vpassword','$vgender','$vlang','vstatus','vdaysav')";
 		mysqli_query($db,$query);
-	 $_SESSION['vname']=$vname;
-	 $_SESSION['success']="you are now logged in";
+	 //$_SESSION['vname']=$vname;
+	 //$_SESSION['success']="you are now logged in";
 	 header('location:volu2.php');
 	 }
 	 ?>

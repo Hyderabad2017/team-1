@@ -15,8 +15,8 @@ echo "Hi";
 	 $query = "INSERT INTO studentdb(sname,saddress,semail,smobile,squalification,spwd,sgender,slang) 
 	 VALUES('$stuname','$saddress','$semail','$smobile','$squali','$spassword','$sgender','$slang')";
 		mysqli_query($db,$query);
-	 $_SESSION['sname']=$sname;
-	 $_SESSION['success']="you are now logged in";
+	 //$_SESSION['sname']=$sname;
+	 //$_SESSION['success']="you are now logged in";
 	 header('location:stu1.php');
 	 }
 	 ?>
