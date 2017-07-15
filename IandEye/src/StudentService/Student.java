@@ -9,7 +9,7 @@ public class Student {
 	String squali;
 	String sgender;
 	String slang;
-	String spwd;
+	String spwd;  
 	public int getSid() {
 		return sid;
 	}
