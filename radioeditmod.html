@@ -24,6 +24,12 @@
 </form>
 
 <div id="s">
+<div class = "container">
+<div class = "jumbotron">
+	<input type="radio" name="selection" value="SignIn"  onclick="ssignin()"> <label>Sign IN</label>
+	<input type="radio" name="selection" value="SignUp"  onclick="ssignup()"> <label >Sign UP</label>
+</div>	
+</div>
 <div class="container">
       <div class="header clearfix">
         <nav>
@@ -90,12 +96,35 @@
 	<input type="radio" name="selection" value="signup"  onclick="vsignup()"> <label >Sign UP</label>
 </div>	
 </div>
+<div id="sin"><!--Code for SignIn-->
+	<div class="container">
+      <div class = "jumbotron">
+          <h2>Enter your login details</h2>
+        <form id = "myForm"  enctype='application/json'>
+          <div = "form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="vname" placeholder="Enter your Name" name="vname">
+          </div>
+          <div = "form-group">
+            <label><bold>Password</bold></label>
+            <input type="text" class="form-control" id="vpwd" placeholder="Enter your Password" name="vpwd">
+          </div>
+		</div>
+			<button type="submit" class="btn btn-primary" onclick=""> LogIn </button>
+      </form>
+      <footer class="footer">
+        <p>I & Eye, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+</div>
+<div id="sup">
 	<div class="container">
       <div class="header clearfix">
         <nav>
 
         </nav>
-        <h3 class="text-muted">Volunteer Details</h3>
+        <h3 class="text-muted">Student Details</h3>
       </div>
 
       <div class="jumbotron">
@@ -136,6 +165,7 @@
           <div = "form-group">
             <label>Gender</label>
 			<select>
+  				<option value="select">--Select--</option>
   				<option value="male">Male</option>
   				<option value="female">Female</option>
 			</select>
@@ -143,10 +173,11 @@
           <div = "form-group">
             <label>language</label>
       <select>
-          <option value="telugu">Telugu</option>
-          <option value="hindi">hindi</option>
-          <option value="english">English</option>
-          <option value="tamil">Tamil</option>
+			<option value="select">--Select--</option>
+			<option value="telugu">Telugu</option>
+			<option value="hindi">Hindi</option>
+			<option value="english">English</option>
+			<option value="tamil">Tamil</option>
       </select>
           </div>
           <div = "form-group">
@@ -175,6 +206,7 @@
       </footer>
 
     </div> <!-- /container -->
+	</div>
 </div>
 <div id="a">
 	<!--Admin Code to be written here-->
@@ -204,9 +236,13 @@
 var stu = document.getElementById('s');
 var vol = document.getElementById('v');
 var adm = document.getElementById('a');
+var sup = document.getElementById('sup');
+var sin = document.getElementById('sin');
 stu.style.display = 'none';
 vol.style.display = 'none';
 adm.style.display = 'none';
+sin.style.display = 'none';
+sup.style.display = 'none';
 
 function student() {
     var stu = document.getElementById('s');
@@ -238,6 +274,23 @@ function admin() {
         adm.style.display = 'none';
     }
 }
+function ssignin() {
+    var si = document.getElementById('sin');
+	signup.style.display = 'none';
+    if (si.style.display === 'none') {
+        si.style.display = 'block';
+    } else {
+        si.style.display = 'none';
+    }
+}
+function ssignup() {
+    var su = document.getElementById('sup');
+	signin.style.display = 'none';
+    if (su.style.display === 'none') {
+        su.style.display = 'block';
+    } else {
+        su.style.display = 'none';
+    }
 
 </script>
     <script
