@@ -4,7 +4,7 @@ public class Admin {
 
 	
 	String adminName;
-	String Password;
+	String password;
 	public String getAdminName() {
 		return adminName;
 	}
@@ -12,10 +12,10 @@ public class Admin {
 		this.adminName = adminName;
 	}
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
 	
 }

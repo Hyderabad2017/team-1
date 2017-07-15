@@ -40,12 +40,13 @@ public class AdminController {
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML}) 
 	public boolean adminauthenticate(Admin admin) throws SQLException, ClassNotFoundException 
 	{
+		//System.out.println(admin);
 		boolean auth=false;
 		String uname =admin.getAdminName();
 		String pwd=admin.getPassword();
 		Class.forName("com.mysql.jdbc.Driver"); 
 
-		String jdbcUrl = "jdbc:mysql://localhost:3306/mysampledb"; 
+		String jdbcUrl = "jdbc:mysql://localhost:3306/IandEye"; 
 
 		       String username = "root"; 
 
@@ -74,6 +75,41 @@ public class AdminController {
 		    	
 		    }
 			return auth;
+			
+		
+		
+	}
+	
+	@POST 
+
+	@Path("qual") 
+
+	@Consumes(MediaType.APPLICATION_JSON) 
+
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML}) 
+	public boolean qualificationUpdate(String qual) throws SQLException, ClassNotFoundException 
+	{
+		boolean update=false;
+		String quali =qual;
+		Class.forName("com.mysql.jdbc.Driver"); 
+
+		String jdbcUrl = "jdbc:mysql://localhost:3306/mysampledb"; 
+
+		       String username = "root"; 
+
+		       String password = "Nidhi@97";  
+
+		    Connection connection = null;    
+
+		    connection = DriverManager.getConnection(jdbcUrl, username, password); 
+
+		    Statement statement = connection.createStatement(); 
+		    
+		    String sql = "insert into qualification values('"+quali+"')"; 
+		    
+		    statement.executeUpdate(sql);
+		   
+			return update;
 			
 		
 		
