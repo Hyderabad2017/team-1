@@ -5,7 +5,7 @@ public class Student {
 	String sname;
 	String saddress;
 	String semail;
-	int snumber;
+	int snum;
 	String squali;
 	String sgender;
 	String slang;
