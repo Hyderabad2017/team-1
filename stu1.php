@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <hmtl>
  <head>
     <meta charset="utf-8">
@@ -81,20 +81,21 @@
           <button type="submit" class="btn btn-primary"> SEND REQUEST </button>
         
       </div>
+	  <div class="jumbotron">
 SCHEDULES EXAMS
-    <div = "form-group">
+    <div class="form-group">
 <textarea rows="4" cols="50"></textarea>
 </div>
 ACCEPTED REQUESTS
-<div = "form-group">
+<div class="form-group">
 <textarea rows="4" cols="50"></textarea>
 </div>
 
 FEEDBACK
-<div = "form-group">
+<div class="form-group">
 <textarea rows="4" cols="50">
 </textarea>
- 
+ </div>
 </div>
 </form>
 

@@ -13,7 +13,7 @@
 
 <body>
 
-<form action="" method="post">
+<form action="radioedit.php" method="post">
 <div class = "container">
 <div class = "jumbotron">
 <h2 class="field_select">Select your field :</h2>
@@ -37,17 +37,17 @@
 	<div class="container">
       <div class = "jumbotron">
           <h2>Enter your login details</h2>
-        <form id = "myForm"  enctype='application/json'>
-          <div = "form-group">
+        <form id = "myForm"  action="studentlogin.php" method="POST">
+          <div class= "form-group">
             <label>Name</label>
             <input type="text" class="form-control" id="sname" placeholder="Enter your Name" name="sname">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label><bold>Password</bold></label>
             <input type="text" class="form-control" id="spwd" placeholder="Enter your Password" name="spwd">
           </div>
 		</div>
-			<button type="submit" class="btn btn-primary" onclick=""> LogIn </button>
+			<button type="submit" class="btn btn-primary" id="stulogin"> LogIn </button>
       </form>
       <footer class="footer">
         <p>I & Eye, Inc.</p>
@@ -66,51 +66,50 @@
 
       <div class="jumbotron">
         <h2>Enter the following details</h2>
-        <form id = "myForm">
+        <form id = "myForm"  action="studentreg.php" method="POST">
           <div = "form-group">
             <label>Name</label>
-            <input type="text" class="form-control" id="sname" placeholder="Enter your Name">
+            <input type="text" class="form-control" id="sname" name="sname" placeholder="Enter your Name">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>address</label>
-            <input type="text" class="form-control" id="saddress" placeholder="Enter the address">
+            <input type="text" class="form-control" id="saddress" name="saddress" placeholder="Enter the address">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>Email-id</label>
-            <input type="text" class="form-control" id="semail" placeholder="Enter your Email-id">
+            <input type="text" class="form-control" id="semail" name="semail" placeholder="Enter your Email-id">
           </div>
           
-          <div = "form-group">
+          <div class= "form-group">
             <label>Mobile Number</label>
-            <input type="text" class="form-control" id="smobile1" placeholder="Enter your Mobile Number">
-          </div>
-          <div = "form-group">
-            <label>Alternative Mobile Number</label>
-            <input type="text" class="form-control" id="smobile2" placeholder="Enter your Alternate Mobile Number">
+            <input type="text" class="form-control" id="smobile" name="smobile" placeholder="Enter your Mobile Number">
           </div>
           
-          <div = "form-group">
+          <div class= "form-group">
             <label>Password</label>
-            <input type="password" class="form-control" id="spwd" placeholder="Enter a password">
+            <input type="password" class="form-control" id="spwd" name="spwd" placeholder="Enter a password">
           </div>
-          <div = "form-group">
+		  <div class= "form-group">
+            <label>Qualification</label>
+            <input type="text" class="form-control" id="squalification" name="squalification" placeholder="Enter your Qualificaiton">
+          </div>
+          <div class= "form-group">
             <label>Gender</label>
-			<select>
+			<select id="sgender" name="sgender">
   				<option value="male">Male</option>
   				<option value="female">Female</option>
 			</select>
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>languages known</label>
-      <select>
+      <select id="slang" name="slang">
           <option value="telugu">Telugu</option>
           <option value="hindi">hindi</option>
           <option value="english">English</option>
           <option value="tamil">Tamil</option>
       </select>
           </div>
-          
-          <button type="submit" class="btn btn-primary"> SUBMIT </button>
+          <button type="submit" class="btn btn-primary" id="stureg"> SUBMIT </button>
         </form>
       </div>	</div>
 </div>
@@ -127,17 +126,17 @@
 	<div class="container">
       <div class = "jumbotron">
           <h2>Enter your login details</h2>
-        <form id = "myForm"  enctype='application/json'>
-          <div = "form-group">
+        <form id = "myForm"  action="vollogin.php" method="POST">
+          <div class= "form-group">
             <label>Name</label>
             <input type="text" class="form-control" id="vname" placeholder="Enter your Name" name="vname">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label><bold>Password</bold></label>
             <input type="text" class="form-control" id="vpwd" placeholder="Enter your Password" name="vpwd">
           </div>
 		</div>
-			<button type="submit" class="btn btn-primary" onclick="checkAdminDetails()"> LogIn </button>
+			<button type="submit" class="btn btn-primary" id="vollogin"> LogIn </button>
       </form>
       <footer class="footer">
         <p>I & Eye, Inc.</p>
@@ -156,50 +155,42 @@
 
       <div class="jumbotron">
         <h2>Enter the following details</h2>
-        <form id = "myForm">
-          <div = "form-group">
+        <form id = "myForm"   action="volreg.php" method="POST">
+          <div class= "form-group">
             <label>Name</label>
-            <input type="text" class="form-control" id="vname" placeholder="Enter your Name">
+            <input type="text" class="form-control" id="vname" name="vname" placeholder="Enter your Name">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>address</label>
-            <input type="text" class="form-control" id="vaddress" placeholder="Enter your qualification">
+            <input type="text" class="form-control" id="vaddress" name="vaddress" placeholder="Enter your qualification">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>Email-id</label>
-            <input type="text" class="form-control" id="vemail1" placeholder="Enter your Email-id">
+            <input type="text" class="form-control" id="vemail1" name="vemail1" placeholder="Enter your Email-id">
           </div>
-          <div = "form-group">
-            <label>Alternative Email-id</label>
-            <input type="text" class="form-control" id="vemail2" placeholder="Enter your Alternate Email-id">
-          </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>Mobile Number</label>
-            <input type="text" class="form-control" id="vmobile1" placeholder="Enter your Mobile Number">
+            <input type="text" class="form-control" id="vmobile1" name="vmobile1" placeholder="Enter your Mobile Number">
           </div>
-          <div = "form-group">
-            <label>Alternative Mobile Number</label>
-            <input type="text" class="form-control" id="vmobile2" placeholder="Enter your Alternate Mobile Number">
-          </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>Qualification</label>
-            <input type="text" class="form-control" id="vqualification" placeholder="Enter your Qualificaiton">
+            <input type="text" class="form-control" id="vqualification" name="vqualification" placeholder="Enter your Qualificaiton">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>Password</label>
-            <input type="password" class="form-control" id="vpwd" placeholder="Enter a password">
+            <input type="password" class="form-control" id="vpwd" name="vpwd" placeholder="Enter a password">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>Gender</label>
-			<select>
+			<select id="vgender" name="vgender">
 				<option value="select">--Select--</option>
   				<option value="male">Male</option>
   				<option value="female">Female</option>
 			</select>
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>language</label>
-      <select>
+      <select id="vlang" name="vlang">
 			<option value="select">--Select--</option>
 			<option value="telugu">Telugu</option>
 			<option value="hindi">Hindi</option>
@@ -207,15 +198,15 @@
 			<option value="tamil">Tamil</option>
       </select>
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label>Status</label>
-            <input type="text" class="form-control" id="vstatus" placeholder="Enter your Status">
+            <input type="text" class="form-control" id="vstatus" name="vstatus" placeholder="Enter your Status">
           </div>          
-          <div = "form-group">
+          <div class= "form-group">
             <label>Days Available</label>
-            <input type="text" class="form-control" id="vdaysav" placeholder="Enter your Qualificaiton">
+            <input type="text" class="form-control" id="vdaysav" name="vdaysav" placeholder="Enter your Qualificaiton">
           </div>
-          <button type="submit" class="btn btn-primary"> GO! </button>
+          <button type="submit" class="btn btn-primary" id="volreg"> GO! </button>
         </form>
       </div>
 
@@ -241,22 +232,21 @@
 	<div class="container">
       <div class = "jumbotron">
           <h2>Enter the following details</h2>
-        <form id = "myForm"  enctype='application/json'>
-          <div = "form-group">
+        <form id = "myForm"   action="admin.php" method="POST">
+          <div class= "form-group">
             <label>Name</label>
             <input type="text" class="form-control" id="adminName" placeholder="Enter your Name" name="adminName">
           </div>
-          <div = "form-group">
+          <div class= "form-group">
             <label><bold>Password</bold></label>
             <input type="text" class="form-control" id="password" placeholder="Enter your Password" name="password">
           </div>
 		</div>
-			<button type="submit" class="btn btn-primary" onclick=""> LogIn </button>
+			<button type="submit" class="btn btn-primary" id="adminreg"> LogIn </button>
       </form>
       <footer class="footer">
         <p>I & Eye, Inc.</p>
       </footer>
-
     </div> <!-- /container -->
 
 </div>
@@ -279,27 +269,24 @@ sup.style.display = 'none';
 
 function checkAdminDetails() {
   var xhttp = new XMLHttpRequest();
-  var url = "http://localhost:8080/IandEye/iandeye/admin/adminpost";
-  xhttp.open("POST", url);
+  var url = "url";
+  xhttp.open("POST", url, true);
   xhttp.setRequestHeader("Content-type", "application/json");
-  var name = document.getElementById("adminName");
-  var pwd = document.getElementById("password");
-	name="nidhi";
-	pwd="nidhi";
-  myObj = { adminName:name, password:pwd };
+  var adminname = document.getElementById("adminname");
+  var password = document.getElementById("password");
+  
+  myObj = { "adminname":adminname, "password":"password" };
   myJSON = JSON.stringify(myObj);
   //localStorage.setItem("testJSON", myJSON);
   //text = localStorage.getItem("testJSON");
   //obj = JSON.parse(text);document.getElementById("demo").innerHTML = obj.name;
 
-  
-    xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function() {
 	if (xhttp.readyState === 4 && xhttp.status === 200) {
         var json = JSON.parse(xhttp.responseText);
     }
   };
   xhttp.send(myJSON);
-  alert(myJSON); 
 }
 
 function student() {
