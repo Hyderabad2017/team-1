@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Select Field</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<form action="" method="post">
+<div class = "container">
+<div class = "jumbotron">
+<h2 class="field_select">Select your field :</h2>
+	<input type="radio" name="selection" value="Student"  onclick="student()"> <label>Student</label>
+	<input type="radio" name="selection" value="Volunteer"  onclick="volunteer()"> <label >Volunteer</label>
+	<input type="radio" name="selection" value="Admin" onclick="admin()"> <label>Admin</label>
+</div>	
+</div>
+</form>
+
+<div id="s">
+	<div class="container">
+      <div class="header clearfix">
+        <nav>
+
+        </nav>
+        <h3 class="text-muted">student Details</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2>Enter the following details</h2>
+        <form id = "myForm">
+          <div = "form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="sname" placeholder="Enter your Name">
+          </div>
+          <div = "form-group">
+            <label>address</label>
+            <input type="text" class="form-control" id="saddress" placeholder="Enter the address">
+          </div>
+          <div = "form-group">
+            <label>Email-id</label>
+            <input type="text" class="form-control" id="semail" placeholder="Enter your Email-id">
+          </div>
+          
+          <div = "form-group">
+            <label>Mobile Number</label>
+            <input type="text" class="form-control" id="smobile1" placeholder="Enter your Mobile Number">
+          </div>
+          <div = "form-group">
+            <label>Alternative Mobile Number</label>
+            <input type="text" class="form-control" id="smobile2" placeholder="Enter your Alternate Mobile Number">
+          </div>
+          
+          <div = "form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" id="spwd" placeholder="Enter a password">
+          </div>
+          <div = "form-group">
+            <label>Gender</label>
+			<select>
+  				<option value="male">Male</option>
+  				<option value="female">Female</option>
+			</select>
+          </div>
+          <div = "form-group">
+            <label>languages known</label>
+      <select>
+          <option value="telugu">Telugu</option>
+          <option value="hindi">hindi</option>
+          <option value="english">English</option>
+          <option value="tamil">Tamil</option>
+      </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary"> SUBMIT </button>
+        </form>
+      </div>	</div>
+</div>
+</div>
+<div id="v">
+<div class = "container">
+<div class = "jumbotron">
+	<input type="radio" name="selection" value="SignIn"  onclick="vsignin()"> <label>Sign IN</label>
+	<input type="radio" name="selection" value="SignUp"  onclick="vsignup()"> <label >Sign UP</label>
+</div>	
+</div>
+<div id="signin"><!--Code for SignIn-->
+	<div class="container">
+      <div class = "jumbotron">
+          <h2>Enter your login details</h2>
+        <form id = "myForm"  enctype='application/json'>
+          <div = "form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="vname" placeholder="Enter your Name" name="vname">
+          </div>
+          <div = "form-group">
+            <label><bold>Password</bold></label>
+            <input type="text" class="form-control" id="vpwd" placeholder="Enter your Password" name="vpwd">
+          </div>
+		</div>
+			<button type="submit" class="btn btn-primary" onclick="checkAdminDetails()"> LogIn </button>
+      </form>
+      <footer class="footer">
+        <p>I & Eye, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+</div>
+<div id="signup"><!--Code for SignUp-->
+		<div class="container">
+      <div class="header clearfix">
+        <nav>
+
+        </nav>
+        <h3 class="text-muted">Volunteer Details</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2>Enter the following details</h2>
+        <form id = "myForm">
+          <div = "form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="vname" placeholder="Enter your Name">
+          </div>
+          <div = "form-group">
+            <label>address</label>
+            <input type="text" class="form-control" id="vaddress" placeholder="Enter your qualification">
+          </div>
+          <div = "form-group">
+            <label>Email-id</label>
+            <input type="text" class="form-control" id="vemail1" placeholder="Enter your Email-id">
+          </div>
+          <div = "form-group">
+            <label>Alternative Email-id</label>
+            <input type="text" class="form-control" id="vemail2" placeholder="Enter your Alternate Email-id">
+          </div>
+          <div = "form-group">
+            <label>Mobile Number</label>
+            <input type="text" class="form-control" id="vmobile1" placeholder="Enter your Mobile Number">
+          </div>
+          <div = "form-group">
+            <label>Alternative Mobile Number</label>
+            <input type="text" class="form-control" id="vmobile2" placeholder="Enter your Alternate Mobile Number">
+          </div>
+          <div = "form-group">
+            <label>Qualification</label>
+            <input type="text" class="form-control" id="vqualification" placeholder="Enter your Qualificaiton">
+          </div>
+          <div = "form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" id="vpwd" placeholder="Enter a password">
+          </div>
+          <div = "form-group">
+            <label>Gender</label>
+			<select>
+				<option value="select">--Select--</option>
+  				<option value="male">Male</option>
+  				<option value="female">Female</option>
+			</select>
+          </div>
+          <div = "form-group">
+            <label>language</label>
+      <select>
+			<option value="select">--Select--</option>
+			<option value="telugu">Telugu</option>
+			<option value="hindi">Hindi</option>
+			<option value="english">English</option>
+			<option value="tamil">Tamil</option>
+      </select>
+          </div>
+          <div = "form-group">
+            <label>Status</label>
+            <input type="text" class="form-control" id="vstatus" placeholder="Enter your Status">
+          </div>          
+          <div = "form-group">
+            <label>Days Available</label>
+            <input type="text" class="form-control" id="vdaysav" placeholder="Enter your Qualificaiton">
+          </div>
+          <button type="submit" class="btn btn-primary"> GO! </button>
+        </form>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <div id="bookmarksResults">
+
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>I & Eye, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+</div>
+
+</div>
+<div id="a">
+	<!--Admin Code to be written here-->
+	<div class="container">
+      <div class = "jumbotron">
+          <h2>Enter the following details</h2>
+        <form id = "myForm"  enctype='application/json'>
+          <div = "form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="adminname" placeholder="Enter your Name" name="adminname">
+          </div>
+          <div = "form-group">
+            <label><bold>Password</bold></label>
+            <input type="text" class="form-control" id="password" placeholder="Enter your Password" name="password">
+          </div>
+		</div>
+			<button type="submit" class="btn btn-primary" onclick="checkAdminDetails()"> LogIn </button>
+      </form>
+      <footer class="footer">
+        <p>I & Eye, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+</div>
+
+<script>
+var stu = document.getElementById('s');
+var vol = document.getElementById('v');
+var adm = document.getElementById('a');
+var signup = document.getElementById('signup');
+var signin = document.getElementById('signin');
+stu.style.display = 'none';
+vol.style.display = 'none';
+adm.style.display = 'none';
+signin.style.display = 'none';
+signup.style.display = 'none';
+
+function checkAdminDetails() {
+  var xhttp = new XMLHttpRequest();
+  var url = "url";
+  xhttp.open("POST", url, true);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  var adminname = document.getElementById("adminname");
+  var password = document.getElementById("password");
+  
+  myObj = { "adminname":adminname, "password":"password" };
+  myJSON = JSON.stringify(myObj);
+  //localStorage.setItem("testJSON", myJSON);
+  //text = localStorage.getItem("testJSON");
+  //obj = JSON.parse(text);document.getElementById("demo").innerHTML = obj.name;
+
+  xhttp.onreadystatechange = function() {
+	if (xhttp.readyState === 4 && xhttp.status === 200) {
+        var json = JSON.parse(xhttp.responseText);
+    }
+  };
+  xhttp.send(myJSON);
+}
+
+function student() {
+    var stu = document.getElementById('s');
+	vol.style.display = 'none';
+	adm.style.display = 'none';
+    if (stu.style.display === 'none') {
+        stu.style.display = 'block';
+    } else {
+        stu.style.display = 'none';
+    }
+}
+function volunteer() {
+    var vol = document.getElementById('v');
+	stu.style.display = 'none';
+	adm.style.display = 'none';
+    if (vol.style.display === 'none') {
+        vol.style.display = 'block';
+    } else {
+        vol.style.display = 'none';
+    }
+}
+function admin() {
+    var adm = document.getElementById('a');
+	vol.style.display = 'none';
+	stu.style.display = 'none';
+    if (adm.style.display === 'none') {
+        adm.style.display = 'block';
+    } else {
+        adm.style.display = 'none';
+    }
+}
+function vsignin() {
+    var si = document.getElementById('signin');
+	signup.style.display = 'none';
+    if (si.style.display === 'none') {
+        si.style.display = 'block';
+    } else {
+        si.style.display = 'none';
+    }
+}
+function vsignup() {
+    var su = document.getElementById('signup');
+	signin.style.display = 'none';
+    if (su.style.display === 'none') {
+        su.style.display = 'block';
+    } else {
+        su.style.display = 'none';
+    }
+}
+
+
+
+
+</script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"> </script>
+    <script src="js/main.js"> </script>
+
+</body>
+</html>
