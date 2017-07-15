@@ -1,4 +1,3 @@
-<?php include('server.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,43 +24,18 @@
 </form>
 
 <div id="s">
-	<!--Code for student-->
-	<div class = "container">
-	<div class = "jumbotron">
-		<input type="radio" name="selection" value="SignIn"  onclick="ssignin()"> <label>Sign IN</label>
-		<input type="radio" name="selection" value="SignUp"  onclick="ssignup()"> <label >Sign UP</label>
-	</div>	
-	</div>
-	
-	<div id="sin"><!--Code for SignIn-->
-	<div class="container">
-      <div class = "jumbotron">
-          <h2>Enter your login details</h2>
-        <form id = "myForm"  enctype='application/json'>
-          <div = "form-group">
-            <label>Name</label>
-            <input type="text" class="form-control" id="sname" placeholder="Enter your Name" name="sname">
-          </div>
-          <div = "form-group">
-            <label><bold>Password</bold></label>
-            <input type="text" class="form-control" id="spwd" placeholder="Enter your Password" name="spwd">
-          </div>
-		</div>
-			<button type="submit" class="btn btn-primary" onclick=""> LogIn </button>
-      </form>
-      <footer class="footer">
-        <p>I & Eye, Inc.</p>
-      </footer>
-
-    </div> <!-- /container -->
+<div class = "container">
+<div class = "jumbotron">
+	<input type="radio" name="selection" value="SignIn"  onclick="ssignin()"> <label>Sign IN</label>
+	<input type="radio" name="selection" value="SignUp"  onclick="ssignup()"> <label >Sign UP</label>
+</div>	
 </div>
-<div id="sup"><!--Code for SignUp-->
-	<div class="container">
+<div class="container">
       <div class="header clearfix">
         <nav>
 
         </nav>
-        <h3 class="text-muted">Student Details</h3>
+        <h3 class="text-muted">student Details</h3>
       </div>
 
       <div class="jumbotron">
@@ -114,16 +88,15 @@
         </form>
       </div>	</div>
 </div>
-</div>
-
 <div id="v">
 <div class = "container">
 <div class = "jumbotron">
-	<input type="radio" name="selection" value="SignIn"  onclick="vsignin()"> <label>Sign IN</label>
-	<input type="radio" name="selection" value="SignUp"  onclick="vsignup()"> <label >Sign UP</label>
+<h2 class="field_select">Select your field :</h2>
+	<input type="radio" name="selection" value="Signin"  onclick="signin()"> <label>Sign IN</label>
+	<input type="radio" name="selection" value="signup"  onclick="vsignup()"> <label >Sign UP</label>
 </div>	
 </div>
-<div id="signin"><!--Code for SignIn-->
+<div id="sin"><!--Code for SignIn-->
 	<div class="container">
       <div class = "jumbotron">
           <h2>Enter your login details</h2>
@@ -137,7 +110,7 @@
             <input type="text" class="form-control" id="vpwd" placeholder="Enter your Password" name="vpwd">
           </div>
 		</div>
-			<button type="submit" class="btn btn-primary" onclick="checkAdminDetails()"> LogIn </button>
+			<button type="submit" class="btn btn-primary" onclick=""> LogIn </button>
       </form>
       <footer class="footer">
         <p>I & Eye, Inc.</p>
@@ -145,13 +118,13 @@
 
     </div> <!-- /container -->
 </div>
-<div id="signup"><!--Code for SignUp-->
-		<div class="container">
+<div id="sup">
+	<div class="container">
       <div class="header clearfix">
         <nav>
 
         </nav>
-        <h3 class="text-muted">Volunteer Details</h3>
+        <h3 class="text-muted">Student Details</h3>
       </div>
 
       <div class="jumbotron">
@@ -192,7 +165,7 @@
           <div = "form-group">
             <label>Gender</label>
 			<select>
-				<option value="select">--Select--</option>
+  				<option value="select">--Select--</option>
   				<option value="male">Male</option>
   				<option value="female">Female</option>
 			</select>
@@ -233,74 +206,43 @@
       </footer>
 
     </div> <!-- /container -->
-</div>
-
+	</div>
 </div>
 <div id="a">
 	<!--Admin Code to be written here-->
 	<div class="container">
       <div class = "jumbotron">
           <h2>Enter the following details</h2>
-        <form id = "myForm"  enctype='application/json'>
+        <form id = "myForm">
           <div = "form-group">
             <label>Name</label>
-            <input type="text" class="form-control" id="adminName" placeholder="Enter your Name" name="adminName">
+            <input type="text" class="form-control" id="name" placeholder="Enter your Name">
           </div>
           <div = "form-group">
             <label><bold>Password</bold></label>
-            <input type="text" class="form-control" id="password" placeholder="Enter your Password" name="password">
+            <input type="text" class="form-control" id="qualification" placeholder="Enter your qualification">
           </div>
-		</div>
-			<button type="submit" class="btn btn-primary" onclick=""> LogIn </button>
+      </div>
+      <button type="submit" class="btn btn-primary"> login </button>
       </form>
       <footer class="footer">
         <p>I & Eye, Inc.</p>
       </footer>
 
     </div> <!-- /container -->
-
 </div>
 
 <script>
 var stu = document.getElementById('s');
 var vol = document.getElementById('v');
 var adm = document.getElementById('a');
-var signup = document.getElementById('signup');
-var signin = document.getElementById('signin');
 var sup = document.getElementById('sup');
 var sin = document.getElementById('sin');
 stu.style.display = 'none';
 vol.style.display = 'none';
 adm.style.display = 'none';
-signin.style.display = 'none';
-signup.style.display = 'none';
 sin.style.display = 'none';
 sup.style.display = 'none';
-
-function checkAdminDetails() {
-  var xhttp = new XMLHttpRequest();
-  var url = "http://localhost:8080/IandEye/iandeye/admin/adminpost";
-  xhttp.open("POST", url);
-  xhttp.setRequestHeader("Content-type", "application/json");
-  var name = document.getElementById("adminName");
-  var pwd = document.getElementById("password");
-	name="nidhi";
-	pwd="nidhi";
-  myObj = { adminName:name, password:pwd };
-  myJSON = JSON.stringify(myObj);
-  //localStorage.setItem("testJSON", myJSON);
-  //text = localStorage.getItem("testJSON");
-  //obj = JSON.parse(text);document.getElementById("demo").innerHTML = obj.name;
-
-  
-    xhttp.onreadystatechange = function() {
-	if (xhttp.readyState === 4 && xhttp.status === 200) {
-        var json = JSON.parse(xhttp.responseText);
-    }
-  };
-  xhttp.send(myJSON);
-  alert(myJSON); 
-}
 
 function student() {
     var stu = document.getElementById('s');
@@ -332,27 +274,9 @@ function admin() {
         adm.style.display = 'none';
     }
 }
-function vsignin() {
-    var si = document.getElementById('signin');
-	signup.style.display = 'none';
-    if (si.style.display === 'none') {
-        si.style.display = 'block';
-    } else {
-        si.style.display = 'none';
-    }
-}
-function vsignup() {
-    var su = document.getElementById('signup');
-	signin.style.display = 'none';
-    if (su.style.display === 'none') {
-        su.style.display = 'block';
-    } else {
-        su.style.display = 'none';
-    }
-}
 function ssignin() {
     var si = document.getElementById('sin');
-	sup.style.display = 'none';
+	signup.style.display = 'none';
     if (si.style.display === 'none') {
         si.style.display = 'block';
     } else {
@@ -361,16 +285,12 @@ function ssignin() {
 }
 function ssignup() {
     var su = document.getElementById('sup');
-	sin.style.display = 'none';
+	signin.style.display = 'none';
     if (su.style.display === 'none') {
         su.style.display = 'block';
     } else {
         su.style.display = 'none';
     }
-}
-
-
-
 
 </script>
     <script
