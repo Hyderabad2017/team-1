@@ -25,10 +25,37 @@
                 <label>For adding student details</label>  
                 <button type="submit" class="btn btn-primary"> Add Student </button>
               </div> 
-              <div = "form-group">            
+             <!-- <div = "form-group">            
 	              <label>Update Qualification details</label>	
                 <input type="text" class="form-control"  id="qualificationdetails" placeholder="Enter the Modified details">
-              </div> 
+              </div>-->
+              <?php
+              $con=mysqli_connect("example","root","");
+              // Check connection
+              if (mysqli_connect_errno())
+              {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+              }
+
+              $result = mysqli_query($con,"SELECT * FROM exmp");
+
+              echo "<table border='0'>
+                    <tr>
+                    <th>id</th>
+                    <th>qname</th>
+                    </tr>";
+
+              while($row = mysqli_fetch_array($result))
+              {
+              echo "<tr>";
+              echo "<td>" . $row['id'] . "</td>";
+              echo "<td>" . $row['qname'] . "</td>";
+              echo "</tr>";
+              }
+              echo "</table>";
+
+              mysqli_close($con);
+              ?> 
               <div = "form-group">            
                 <label>Add Qualifications</label> 
                 <input type="text" class="form-control"  id="addqualifications" placeholder="Enter the Modified qualification"> 
