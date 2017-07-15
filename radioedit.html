@@ -24,17 +24,39 @@
 </form>
 
 <div id="s">
-	Code for student"
+	Code for student
 </div>
 <div id="v">
 <div class = "container">
 <div class = "jumbotron">
-<h2 class="field_select">Select your field :</h2>
-	<input type="radio" name="selection" value="Signin"  onclick="signin()"> <label>Sign IN</label>
-	<input type="radio" name="selection" value="signup"  onclick="vsignup()"> <label >Sign UP</label>
+	<input type="radio" name="selection" value="SignIn"  onclick="vsignin()"> <label>Sign IN</label>
+	<input type="radio" name="selection" value="SignUp"  onclick="vsignup()"> <label >Sign UP</label>
 </div>	
 </div>
+<div id="signin"><!--Code for SignIn-->
 	<div class="container">
+      <div class = "jumbotron">
+          <h2>Enter your login details</h2>
+        <form id = "myForm"  enctype='application/json'>
+          <div = "form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="vname" placeholder="Enter your Name" name="vname">
+          </div>
+          <div = "form-group">
+            <label><bold>Password</bold></label>
+            <input type="text" class="form-control" id="vpwd" placeholder="Enter your Password" name="vpwd">
+          </div>
+		</div>
+			<button type="submit" class="btn btn-primary" onclick="checkAdminDetails()"> LogIn </button>
+      </form>
+      <footer class="footer">
+        <p>I & Eye, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+</div>
+<div id="signup"><!--Code for SignUp-->
+		<div class="container">
       <div class="header clearfix">
         <nav>
 
@@ -80,6 +102,7 @@
           <div = "form-group">
             <label>Gender</label>
 			<select>
+				<option value="select">--Select--</option>
   				<option value="male">Male</option>
   				<option value="female">Female</option>
 			</select>
@@ -87,10 +110,11 @@
           <div = "form-group">
             <label>language</label>
       <select>
-          <option value="telugu">Telugu</option>
-          <option value="hindi">hindi</option>
-          <option value="english">English</option>
-          <option value="tamil">Tamil</option>
+			<option value="select">--Select--</option>
+			<option value="telugu">Telugu</option>
+			<option value="hindi">Hindi</option>
+			<option value="english">English</option>
+			<option value="tamil">Tamil</option>
       </select>
           </div>
           <div = "form-group">
@@ -120,37 +144,66 @@
 
     </div> <!-- /container -->
 </div>
+
+</div>
 <div id="a">
 	<!--Admin Code to be written here-->
 	<div class="container">
       <div class = "jumbotron">
           <h2>Enter the following details</h2>
-        <form id = "myForm">
+        <form id = "myForm"  enctype='application/json'>
           <div = "form-group">
             <label>Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+            <input type="text" class="form-control" id="adminname" placeholder="Enter your Name" name="adminname">
           </div>
           <div = "form-group">
             <label><bold>Password</bold></label>
-            <input type="text" class="form-control" id="qualification" placeholder="Enter your qualification">
+            <input type="text" class="form-control" id="password" placeholder="Enter your Password" name="password">
           </div>
-      </div>
-      <button type="submit" class="btn btn-primary"> login </button>
+		</div>
+			<button type="submit" class="btn btn-primary" onclick="checkAdminDetails()"> LogIn </button>
       </form>
       <footer class="footer">
         <p>I & Eye, Inc.</p>
       </footer>
 
     </div> <!-- /container -->
+
 </div>
 
 <script>
 var stu = document.getElementById('s');
 var vol = document.getElementById('v');
 var adm = document.getElementById('a');
+var signup = document.getElementById('signup');
+var signin = document.getElementById('signin');
 stu.style.display = 'none';
 vol.style.display = 'none';
 adm.style.display = 'none';
+signin.style.display = 'none';
+signup.style.display = 'none';
+
+function checkAdminDetails() {
+  var xhttp = new XMLHttpRequest();
+  var url = "url";
+  xhttp.open("POST", url, true);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  var adminname = document.getElementById("adminname");
+  var password = document.getElementById("password");
+  
+  myObj = { "adminname":adminname, "password":"password" };
+  myJSON = JSON.stringify(myObj);
+  //localStorage.setItem("testJSON", myJSON);
+  //text = localStorage.getItem("testJSON");
+  //obj = JSON.parse(text);document.getElementById("demo").innerHTML = obj.name;
+
+  xhttp.onreadystatechange = function() {
+	if (xhttp.readyState === 4 && xhttp.status === 200) {
+        var json = JSON.parse(xhttp.responseText);
+    }
+  };
+  xhttp.send(myJSON);
+}
 
 function student() {
     var stu = document.getElementById('s');
@@ -182,6 +235,27 @@ function admin() {
         adm.style.display = 'none';
     }
 }
+function vsignin() {
+    var si = document.getElementById('signin');
+	signup.style.display = 'none';
+    if (si.style.display === 'none') {
+        si.style.display = 'block';
+    } else {
+        si.style.display = 'none';
+    }
+}
+function vsignup() {
+    var su = document.getElementById('signup');
+	signin.style.display = 'none';
+    if (su.style.display === 'none') {
+        su.style.display = 'block';
+    } else {
+        su.style.display = 'none';
+    }
+}
+
+
+
 
 </script>
     <script
