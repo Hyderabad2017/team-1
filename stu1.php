@@ -1,3 +1,4 @@
+<?php include('server.php'); ?>
 <!doctype html>
 <hmtl>
  <head>
@@ -22,13 +23,24 @@
         
         <form id = "myForm">
 <h2> REQUEST A SCRIBE</h2>
-          <div = "form-group">
-            
-	 
-	EXAM DETAILS</br>
+EXAM DETAILS</br>
+<div = "form-group">
 	<label>NAME OF THE EXAM</label>
-            <input type="text" class="form-control"  id="ename" placeholder="Enter the Name of the exam">
-          </div>
+			<select name="ename" id="ename">
+		<?php
+		$query = "SELECT ename FROM examdb";
+		$result = mysqli_query($db, $query);
+		
+		while ($cdrow=mysqli_fetch_array($result)) {
+            $cdTitle=$cdrow["ename"];
+                echo "<option>
+                    $cdTitle
+                </option>";
+            }
+		
+		?></select>
+
+</div>
           <div = "form-group">
             <label>DATE</label>
             <input type="date" class="form-control" id="dt" placeholder="ENTER THE DATE OF THE EXAM">
@@ -37,7 +49,7 @@
             <label>LOCATION</label>
             <input type="text" class="form-control" id="lc" placeholder="ENTER THE LOCATION">
           </div><br/>
-	REQUIREMENTS OF SCRIBE </br>
+	<label>REQUIREMENTS OF SCRIBE:</label> </br>
 	<div = "form-group">
             <label>LANGUAGE</label>
  
@@ -51,6 +63,7 @@
   				</ul>
 			</div>-->
 			<select>
+			<option value="">--No Option--</option>
   				<option value="telugu">Telugu</option>
   				<option value="hindi">hindi</option>
   				<option value="english">English</option>
