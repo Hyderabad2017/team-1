@@ -1,0 +1,23 @@
+importjava.sql.*;
+importjavax.sql.*;
+public class JdbcDemo
+{
+	public static void main(String args[])throws Exception
+	{
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");  
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/db101","root","");  
+			Statement stmt=con.createStatement(); 
+			String str="insert into table_demovalues('WebTechnologies','CSE')";
+			stmt.execute(str);
+			stmt.close();
+			
+		}
+		catch(ClassNotFoundException|SQLException e)
+		{ 
+			e.printStackTrace();         
+		}  
+	}  
+}  
+
