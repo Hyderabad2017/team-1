@@ -154,7 +154,7 @@
         <form id = "myForm"  enctype='application/json'>
           <div = "form-group">
             <label>Name</label>
-            <input type="text" class="form-control" id="adminname" placeholder="Enter your Name" name="adminname">
+            <input type="text" class="form-control" id="adminName" placeholder="Enter your Name" name="adminName">
           </div>
           <div = "form-group">
             <label><bold>Password</bold></label>
@@ -185,24 +185,27 @@ signup.style.display = 'none';
 
 function checkAdminDetails() {
   var xhttp = new XMLHttpRequest();
-  var url = "url";
-  xhttp.open("POST", url, true);
+  var url = "http://localhost:8080/IandEye/iandeye/admin/adminpost";
+  xhttp.open("POST", url);
   xhttp.setRequestHeader("Content-type", "application/json");
-  var adminname = document.getElementById("adminname");
-  var password = document.getElementById("password");
-  
-  myObj = { "adminname":adminname, "password":"password" };
+  var name = document.getElementById("adminName");
+  var pwd = document.getElementById("password");
+	name="nidhi";
+	pwd="nidhi";
+  myObj = { adminName:name, password:pwd };
   myJSON = JSON.stringify(myObj);
   //localStorage.setItem("testJSON", myJSON);
   //text = localStorage.getItem("testJSON");
   //obj = JSON.parse(text);document.getElementById("demo").innerHTML = obj.name;
 
-  xhttp.onreadystatechange = function() {
+  
+    xhttp.onreadystatechange = function() {
 	if (xhttp.readyState === 4 && xhttp.status === 200) {
         var json = JSON.parse(xhttp.responseText);
     }
   };
   xhttp.send(myJSON);
+  alert(myJSON); 
 }
 
 function student() {
