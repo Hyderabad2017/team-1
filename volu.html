@@ -1,40 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<hmtl>
+ <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Select Field</title>
+ 	<title>Volunteer Page</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+ </head>
+   <body>
 
-</head>
-
-<body>
-
-<form action="" method="post">
-<div class = "container">
-<div class = "jumbotron">
-<h2 class="field_select">Select your field :</h2>
-	<input type="radio" name="selection" value="Student"  onclick="student()"> <label>Student</label>
-	<input type="radio" name="selection" value="Volunteer"  onclick="volunteer()"> <label >Volunteer</label>
-	<input type="radio" name="selection" value="Admin" onclick="admin()"> <label>Admin</label>
-</div>	
-</div>
-</form>
-
-<div id="s">
-	Student Code to be written here
-</div>
-<div id="v">
-<div class = "container">
-<div class = "jumbotron">
-<h2 class="field_select">Select your field :</h2>
-	<input type="radio" name="selection" value="Signin"  onclick="signin()"> <label>Sign IN</label>
-	<input type="radio" name="selection" value="signup"  onclick="vsignup()"> <label >Sign UP</label>
-</div>	
-</div>
-	<div class="container">
+    <div class="container">
       <div class="header clearfix">
         <nav>
 
@@ -119,57 +95,11 @@
       </footer>
 
     </div> <!-- /container -->
-</div>
-<div id="a">
-	Admin Code to be written here
-</div>
-
-<script>
-var stu = document.getElementById('s');
-var vol = document.getElementById('v');
-var adm = document.getElementById('a');
-stu.style.display = 'none';
-vol.style.display = 'none';
-adm.style.display = 'none';
-
-function student() {
-    var stu = document.getElementById('s');
-	vol.style.display = 'none';
-	adm.style.display = 'none';
-    if (stu.style.display === 'none') {
-        stu.style.display = 'block';
-    } else {
-        stu.style.display = 'none';
-    }
-}
-function volunteer() {
-    var vol = document.getElementById('v');
-	stu.style.display = 'none';
-	adm.style.display = 'none';
-    if (vol.style.display === 'none') {
-        vol.style.display = 'block';
-    } else {
-        vol.style.display = 'none';
-    }
-}
-function admin() {
-    var adm = document.getElementById('a');
-	vol.style.display = 'none';
-	stu.style.display = 'none';
-    if (adm.style.display === 'none') {
-        adm.style.display = 'block';
-    } else {
-        adm.style.display = 'none';
-    }
-}
-
-</script>
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"> </script>
     <script src="js/main.js"> </script>
-
-</body>
-</html>
+  </body>
+</hmtl>
