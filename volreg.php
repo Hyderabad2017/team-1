@@ -1,5 +1,4 @@
 <?php
-echo "Hi";
 	include('server.php');
 	$vname = mysqli_escape_string($db,$_POST['vname']);
 	$vaddress=mysqli_escape_string($db,$_POST['vaddress']);

@@ -26,7 +26,7 @@
 EXAM DETAILS</br>
 <div = "form-group">
 	<label>NAME OF THE EXAM</label>
-			<select name="ename" id="ename">
+		<select name="ename" id="ename">
 		<?php
 		$query = "SELECT ename FROM examdb";
 		$result = mysqli_query($db, $query);

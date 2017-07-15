@@ -20,22 +20,20 @@
       </div>
 
       <div class="jumbotron">       
-        <form id = "myForm">
+       
             <h2> MODIFYING DETAILS</h2>
               <div = "form-group">            
                 <label>For adding student details</label>  
 				<form action="studentadd.php" method="post">
 				<a type="button" class="btn btn-primary" value="Submit" href = "studentadd.php">Submit</a>
 				</form>
-
-				
               </div>
 			  
              <!-- <div = "form-group">            
 	              <label>Update Qualification details</label>	
                 <input type="text" class="form-control"  id="qualificationdetails" placeholder="Enter the Modified details">
               </div>-->
-  
+  <br>
               <div = "form-group">            
                 <label>Add Qualifications</label> 
 				
@@ -52,25 +50,28 @@
 				}
 			?></select>
 
-				
-                <input type="text" class="form-control"  id="addqualifications" placeholder="Enter the Modified qualification"> 
+				<form id = "myForm"  action="addquali.php" method="POST">
+                <input type="text" class="form-control"  id="addqualifications" name="addqualifications" placeholder="Enter to update qualification"> 
                 <button type="submit" class="btn btn-primary"> ADD </button>
-              </div>         
-              <div = "form-group">            
+				</form>
+              </div>   
+<br>			  
+              <!--<div = "form-group">            
                 <label>Scheduled Details</label><br>  
                 <textarea rows="4" cols="50">
                 </textarea>
-              </div> 
+              </div> -->
               <div = "form-group">            
                 <label>To send alert to students</label>  
                 <button type="submit" class="btn btn-primary"> Send Alert </button>
               </div> 
+			  <br>
               <div = "form-group">            
                 <label>To get mapping details</label>  
                 <button onclick="onclickfun()"> Mapping Details </button>
+				<a type="button" class="btn btn-primary" value="Download" href="mappingdb.sql" download="mappingfile">Download</a>
               </div>
-          <button type="submit" class="btn btn-primary"> SUBMIT </button>
-        </form>        
+
       </div>
 
 
