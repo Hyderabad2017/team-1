@@ -25,7 +25,7 @@
               <div = "form-group">            
                 <label>For adding student details</label>  
 				<form action="studentadd.php" method="post">
-				<a type="button" class="btn btn-primary" value="Submit" href = "studentadd.php">Submit</a>
+				<a type="button" class="btn btn-primary" value="Submit" href = "studentadd.php">ADD</a>
 				</form>
               </div>
 			  
