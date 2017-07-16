@@ -13,7 +13,7 @@ echo $message."<br><br><br>";
 }
 ?>
 <html>
-<body background="logo.png">
+<body >
 <form action="" method="post"  >    
 <?php
 $conn = mysqli_connect("localhost","root","");
@@ -21,7 +21,7 @@ mysqli_select_db($conn,"Team-1");
 ?>
        <input type="submit" name="submit" value="Submit"/>
 </form> 
-<b><marquee><font color='blue'>I & Eye, Sharing Vision<marquee></b>
+
 <img src="ieye.jpg" class="img-responsive" alt="Cinque Terre" style="width:150px;height:114px;" align="right">
 </body>
 </html>

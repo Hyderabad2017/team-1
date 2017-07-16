@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
  </head>
-   <body background="logo.png">
+   <body >
 
     <div class="container">
       <div class="header clearfix">

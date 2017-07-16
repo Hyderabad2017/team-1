@@ -11,7 +11,7 @@
 
 </head>
 
-<body background="logo.png">
+<body >
 
 <form action="radioedit.php" method="post">
 <div class = "container">
@@ -251,7 +251,7 @@
     </div> <!-- /container -->
 
 </div>
-<b><marquee><font color='blue'>I & Eye, Sharing Vision<marquee></b>
+
 
 
 <script>
