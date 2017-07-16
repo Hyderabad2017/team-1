@@ -251,7 +251,7 @@
     </div> <!-- /container -->
 
 </div>
-<b><marquee><font color='red'>Please use your University Registered Roll Number as Username.<marquee></b>
+<b><marquee><font color='blue'>I & Eye, Sharing Vision<marquee></b>
 
 
 <script>

@@ -66,6 +66,7 @@
 
 
     </div> <!-- /container -->
+    <b><marquee><font color='blue'>I & Eye, Sharing Vision<marquee></b>
     <img src="ieye.jpg" class="img-responsive" alt="Cinque Terre" style="width:150px;height:114px;" align="right">
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
