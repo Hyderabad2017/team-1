@@ -40,28 +40,28 @@
 		
 					?></select>
 					</div>
-					<div = "form-group">
+					<div class = "form-group">
 						<label>No. of days of exam</label>
 						<input type="text" class="form-control" id="ndays" name="ndays" style="width:70px;" placeholder="NO.">
 					</div>
-					<div = "form-group">
+					<div class = "form-group">
 						<label>DATE</label>
 						<input type="date" class="form-control" id="dt" name="dt" placeholder="ENTER THE DATE OF THE EXAM">
 					</div>
-					<div = "form-group">
+					<div class = "form-group">
 						<label>TIME</label>
 						<input type="time" class="form-control" id="tm" name="tm" placeholder="ENTER THE TIME OF THE EXAMINATION">
 					</div>
-					<div = "form-group">
+					<div class = "form-group">
 						<label>DURATION</label>
 						<input type="text" class="form-control" id="dur" name="dur" placeholder="ENTER THE DURATION OF EXAM">
 					</div>
-					<div = "form-group">
+					<div class = "form-group">
 						<label>LOCATION</label>
 						<input type="text" class="form-control" id="lc" name="lc" placeholder="ENTER THE LOCATION">
 					</div><br/>
 					<label>REQUIREMENTS OF SCRIBE:</label> </br>
-					<div = "form-group">
+					<div class = "form-group">
 					<label>LANGUAGE</label>
  
             <!--<div class="dropdown">
@@ -94,7 +94,7 @@
     				
   				</ul>
 			</div>-->
-						<select>
+						<select id="gend" name="gend">
 							<option value="male">male</option>
 							<option value="female">female</option>
 						</select>
@@ -116,7 +116,8 @@ ACCEPTED REQUESTS
 FEEDBACK
 <div class="form-group">
 <textarea rows="4" cols="50">
-</textarea>
+</textarea><br>
+<button type="submit" class="btn btn-primary" id="sendreq"> SUBMIT FEEDBACK </button>
  </div>
 </div>
 
@@ -135,6 +136,9 @@ FEEDBACK
       </footer>
 
     </div> <!-- /container -->
+	
+
+	
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

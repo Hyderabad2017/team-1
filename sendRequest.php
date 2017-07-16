@@ -3,11 +3,11 @@
 	$ename = mysqli_escape_string($db,$_POST['ename']);
 	
 	 if(count($errors)==0){
-		 $query = "INSERT INTO exam_quali_mapping (q1) VALUES
-		 (SELECT vid,vname FROM team_1 WHERE vqualification!='$ename')";
+		 $query = "INSERT INTO mappingdb (vid,sid,vname,sname,vaddress,saddress,vemail,semail,vmobile,smobile,backup1,backup2,ndays,time,dur) 
+		 VALUES ( $_POST['dt'], $_POST['lc'], $_POST['send'], $_POST['gend'], $_POST['ndays'],$_POST['tm'], $_POST['dur'])";
 	//$result = mysqli_query($db,$query);
 		
-		if ($result=mysqli_query($con,$sql))
+		if ($result=mysqli_query($db,$query))
   {
   // Fetch one and one row
   while ($row=mysqli_fetch_row($result))
