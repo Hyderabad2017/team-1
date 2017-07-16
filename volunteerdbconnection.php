@@ -13,7 +13,7 @@ echo $message."<br><br><br>";
 }
 ?>
 <html>
-<body>
+<body background="logo.png">
 <form action="" method="post"  >    
 <?php
 $conn = mysqli_connect("localhost","root","");

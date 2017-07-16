@@ -12,7 +12,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body background="logo.png">
 
     <div class="container">
       <div class="header clearfix">

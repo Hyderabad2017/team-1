@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body background="logo.png">
 
 <form action="radioedit.php" method="post">
 <div class = "container">
