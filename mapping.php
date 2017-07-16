@@ -60,7 +60,7 @@
         </div>
       </div>
 
-<Button onClick="/messageNotifications.php" >Accept</Button>
+<Button onClick="/sendnotifications.php" >Accept</Button>
 <Button onClick="/Rejectedrequest.php" >Reject</Button>
 
 
