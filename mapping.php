@@ -60,7 +60,13 @@
         </div>
       </div>
 
+<Button onClick="/sendnotifications.php" >Accept</Button>
+<Button onClick="/Rejectedrequest.php" >Reject</Button>
+
+
+
     </div> <!-- /container -->
+    <img src="ieye.jpg" class="img-responsive" alt="Cinque Terre" style="width:150px;height:114px;" align="right">
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

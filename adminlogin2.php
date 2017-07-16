@@ -25,7 +25,7 @@
               <div = "form-group">            
                 <label>For adding student details</label>  
 				<form action="studentadd.php" method="post">
-				<a type="button" class="btn btn-primary" value="Submit" href = "studentadd.php">Submit</a>
+				<a type="button" class="btn btn-primary" value="Submit" href = "studentadd.php">ADD</a>
 				</form>
               </div>
 			  
@@ -96,6 +96,7 @@
       </footer>
 
     </div> <!-- /container -->
+
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

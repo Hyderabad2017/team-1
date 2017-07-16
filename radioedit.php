@@ -251,6 +251,8 @@
     </div> <!-- /container -->
 
 </div>
+<b><marquee><font color='red'>Please use your University Registered Roll Number as Username.<marquee></b>
+
 
 <script>
 var stu = document.getElementById('s');
