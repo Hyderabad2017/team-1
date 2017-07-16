@@ -17,7 +17,7 @@
 	 VALUES('$vname','$vaddress','$vemail','$vmobile','$vquali','$vpassword','$vgender','$vlang','vstatus','vdaysav')";
 		mysqli_query($db,$query);
 	 //$_SESSION['vname']=$vname;
-	 //$_SESSION['success']="you are now logged in";
+	 //$_SESSION['success']="you logged in";
 	 header('location:volu2.php');
 	 }
 	 ?>
