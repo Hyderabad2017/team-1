@@ -97,16 +97,16 @@ EXAM DETAILS</br>
 	  <div class="jumbotron">
 SCHEDULES EXAMS
     <div class="form-group">
-<textarea rows="4" cols="50"></textarea>
+<textarea rows="4" cols="30"></textarea>
 </div>
 ACCEPTED REQUESTS
 <div class="form-group">
-<textarea rows="4" cols="50"></textarea>
+<textarea rows="4" cols="30"></textarea>
 </div>
 
 FEEDBACK
 <div class="form-group">
-<textarea rows="4" cols="50">
+<textarea rows="4" cols="30">
 </textarea>
  </div>
 </div>
@@ -126,6 +126,7 @@ FEEDBACK
       </footer>
 
     </div> <!-- /container -->
+    <img src="ieye.jpg" class="img-responsive" alt="Cinque Terre" style="width:150px;height:114px;" align="right">
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

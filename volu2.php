@@ -40,7 +40,7 @@
           <div = "form-group">
             <label>All accepted requests</label>
           </div>          
-          <textarea rows="4" cols="50" name="mapret">
+          <textarea rows="4" cols="30" name="mapret">
           </textarea>
         </form>
       </div>
@@ -55,6 +55,7 @@
       </div>
 
     </div> <!-- /container -->
+    <img src="ieye.jpg" class="img-responsive" alt="Cinque Terre" style="width:150px;height:114px;" align="right">
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

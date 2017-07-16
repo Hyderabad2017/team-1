@@ -9,5 +9,8 @@
 	 //$_SESSION['vname']=$vname;
 	 //$_SESSION['success']="you are now logged in";
 	 header('location:adminlogin2.php');
+	 echo '<script language="javascript">';
+	 echo 'alert("successfully updated")';
+	 echo '</script>';
 	 }
 	 ?>

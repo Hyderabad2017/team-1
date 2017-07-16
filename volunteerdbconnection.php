@@ -21,5 +21,6 @@ mysqli_select_db($conn,"Team-1");
 ?>
        <input type="submit" name="submit" value="Submit"/>
 </form> 
+<img src="ieye.jpg" class="img-responsive" alt="Cinque Terre" style="width:150px;height:114px;" align="right">
 </body>
 </html>

@@ -89,6 +89,7 @@
           </div>
         </div>
       </div>
+      <img src="ieye.jpg" class="img-responsive" alt="Cinque Terre" style="width:150px;height:114px;" align="right">
 
       <footer class="footer">
         <p>I & Eye, Inc.</p>
