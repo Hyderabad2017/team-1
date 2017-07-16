@@ -74,8 +74,8 @@
 			  <br>
               <div = "form-group">            
                 <label>To get mapping details</label>  
-                <button onclick="onclickfun()"> Mapping Details </button>
-				<a type="button" class="btn btn-primary" value="Download" href="mappingdb.sql" download="mappingfile">Download</a>
+                <button class="btn btn-primary" onclick="onclickfun()"> Mapping Details </button>
+				<!--<a type="button" class="btn btn-primary" value="Download" href="mappingdb.sql" download="mappingfile">Download</a>-->
               </div>
 
       </div>

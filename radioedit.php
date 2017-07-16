@@ -44,7 +44,7 @@
           </div>
           <div class= "form-group">
             <label><bold>Password</bold></label>
-            <input type="text" class="form-control" id="spwd" placeholder="Enter your Password" name="spwd">
+            <input type="password" class="form-control" id="spwd" placeholder="Enter your Password" name="spwd">
           </div>
 		</div>
 			<button type="submit" class="btn btn-primary" id="stulogin"> LogIn </button>
@@ -133,7 +133,7 @@
           </div>
           <div class= "form-group">
             <label><bold>Password</bold></label>
-            <input type="text" class="form-control" id="vpwd" placeholder="Enter your Password" name="vpwd">
+            <input type="password" class="form-control" id="vpwd" placeholder="Enter your Password" name="vpwd">
           </div>
 		</div>
 			<button type="submit" class="btn btn-primary" id="vollogin"> LogIn </button>
@@ -239,7 +239,7 @@
           </div>
           <div class= "form-group">
             <label><bold>Password</bold></label>
-            <input type="text" class="form-control" id="password" placeholder="Enter your Password" name="password">
+            <input type="password" class="form-control" id="password" placeholder="Enter your Password" name="password">
           </div>
 		</div>
 			<button type="submit" class="btn btn-primary" id="adminreg"> LogIn </button>
