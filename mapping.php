@@ -60,6 +60,11 @@
         </div>
       </div>
 
+<Button onClick="/messageNotifications.php" >Accept</Button>
+<Button onClick="/Rejectedrequest.php" >Reject</Button>
+
+
+
     </div> <!-- /container -->
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
