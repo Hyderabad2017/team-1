@@ -34,12 +34,20 @@
             <option value="inter2">Intermediate 2nd year</option>
             <option value="btech">Btech</option>
           </select><br>
-          <button type="submit" class="btn btn-primary btn-xs"> Submit </button>
+          
           <div = "form-group">
             <label>Mapped Details</label>
-          </div>          
-          <textarea rows="4" cols="50" name="mapret">
-          </textarea>
+          </div>  
+			<form action="/action_page.php" method="get">
+				<input type="checkbox" name="vehicle" value="Bike"> Intermediate<br>
+				<input type="checkbox" name="vehicle" value="Car" checked> 9th Standard<br>
+				<input type="checkbox" name="vehicle" value="Car"> Bank PO<br>
+				<input type="checkbox" name="vehicle" value="Car"> LLB<br>
+				<input type="checkbox" name="vehicle" value="Car"> CA<br>
+				<button type="submit" class="btn btn-primary btn-xs"> Submit </button>
+			</form>
+			
+          
         </form>
       </div>
 

@@ -62,6 +62,12 @@
                 </textarea>
               </div> -->
               <div = "form-group">            
+                <label>Set Qualification</label>  
+                <!--<button onclick="onclickfun()"> Mapping Details </button>-->
+				<a type="button" class="btn btn-primary" value="Submit" href = "mapping.php"> Map </a>
+              </div>
+			  <br>
+              <div = "form-group">            
                 <label>To send alert to students</label>  
                 <button type="submit" class="btn btn-primary"> Send Alert </button>
               </div> 
