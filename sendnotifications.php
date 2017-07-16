@@ -1,4 +1,4 @@
-<?php 
+/*<?php 
  
 // Get the PHP helper library from twilio.com/docs/php/install 
 require_once './vendor/autoload.php'; // Loads the library 
@@ -19,3 +19,4 @@ $messages = $client->messages->create("+919640904164", array(
         echo "The Scribe details of ".'$student' " are " .'$body1'.'$body2'.'$body3';
 	echo"All THE BEST";   
   ));
+*/
